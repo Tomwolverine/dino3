@@ -5,15 +5,16 @@
         <textarea id="application-text" rows="8" cols="100"></textarea>
         <input id="submit" type="submit" value="Submit" />
         </form>
-        <p id="message">&nbsp;</p>
+    </section>
+        <!-- <p id="message">&nbsp;</p>
         <button id="preview-toggle">Show Preview</button>
-        <section id="application-preview" class="hidden"></section>
+        <section id="application-preview" class="hidden"></section> -->
 </template>
 
 <script>
 export default {
-    name: "Inputform",
-    components: 
+    name: "Inputform"
+    
     
 }
 </script>

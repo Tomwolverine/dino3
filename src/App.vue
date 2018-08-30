@@ -2,6 +2,7 @@
   <div id="app">
     <Header />
     <JobDetails />
+    <Inputform />
     <Footer />
   </div>
 </template>
@@ -9,7 +10,7 @@
 <script>
 import Header from './components/Header'
 import JobDetails from './components/JobDetails'
-// import Inputform from './components/Inputform'
+import Inputform from './components/Inputform'
 import Footer from './components/Footer'
 
 export default {
@@ -17,7 +18,7 @@ export default {
   components: {
     Header,
     JobDetails,
-    // Inputform,
+    Inputform,
     Footer
   }
 }
