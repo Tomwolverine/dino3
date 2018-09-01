@@ -22,6 +22,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 
 ## Deployed link  
+https://dino3-754d5.firebaseapp.com/
 
 ### Framework of Choice
 Vue.js
