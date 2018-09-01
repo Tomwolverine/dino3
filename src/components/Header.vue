@@ -1,8 +1,7 @@
 <template>
-        <header>
-            <img src="../assets/g-dino.png" alt="Dinosaur Logo" />
-        </header>
-
+    <header>
+        <img src="../assets/g-dino.png" alt="Dinosaur Logo" />
+    </header>
 </template>
 
 <script>

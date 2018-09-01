@@ -1,10 +1,14 @@
 <template>
-  <div id="app">
-    <Header />
-    <JobDetails />
-    <Inputform />
-    <Footer />
-  </div>
+  <html>
+    <body>
+      <Header />
+      <main>
+        <JobDetails v-bind:listing="listing"/>
+        <Inputform />
+      </main>
+      <Footer />
+    </body>
+  </html>
 </template>
 
 <script>
@@ -20,10 +24,54 @@ export default {
     JobDetails,
     Inputform,
     Footer
+  },
+  data() {
+    return {
+      listing: [],
+      apiURL: '../static/listing.json'
+    }
+  },
+  created() {
+    fetch(this.apiURL) 
+      .then(response => response.json())
+      .then((json) => {
+        return json;
+      })
+      .then(json => this.listing = json)
+    
   }
 }
 </script>
 
 <style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 1vw 0 1vw;
+  padding: 0;
+  font-family: sans-serif;
+  color: #1B997A;
+  display: grid;
+  grid-template-rows: 15% 75% 10%;
+}
+
+main {
+  grid-row: 2/3;
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+main section {
+  grid-column: 2/3;
+}
 </style>

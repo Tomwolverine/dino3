@@ -11,6 +11,12 @@ export default {
 </script>
 
 <style>
+small {
+    color: black;
+    font-size: .5rem;
+    margin-left: 10px;
+}
+
 footer {
     position: fixed;
     bottom: 0;

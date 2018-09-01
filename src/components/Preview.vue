@@ -1,12 +1,28 @@
 <template>
-    <section id="job-details">
-        <h2>Job Details</h2>
-    </section>
+    <div>
+        <p>{{message}}</p>
+        <button v-on:click="showPreviewBox" id="preview-toggle">Show Preview</button>
+        <section v-if="display" id="application-preview">
+            {{applyText}}
+        </section>
+    </div>
 </template>
 
 <script>
 export default {
-    
+    name: 'Preview',
+    data() {
+        return {
+            display: false
+        }
+    },
+    methods: {
+        showPreviewBox: function() {
+            this.display = !this.display
+        }
+        
+    },
+    props: ['applyText', 'message']
 }
 </script>
 
@@ -18,5 +34,9 @@ export default {
     min-height: 100px;
     margin-top: 20px;
     padding: 10px;
+}
+
+section {
+    font-weight: 500;
 }
 </style>
